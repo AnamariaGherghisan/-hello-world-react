@@ -4,10 +4,13 @@ export const Introduction = ({ fullName, imageSrc, description }) => {
   return (
     <div className="introduction">
       <div className="image-container">
-        <img src={imageSrc} alt="Profile" />
+        <img src={imageSrc} alt="Profile" style={{ width: '300px', height: '300px' }} className="introduction-image"/>
       </div>
-      <h2>{fullName}</h2>
-      <p>{description}</p>
+      <h2 className="introduction-fullname">{fullName}</h2>
+      <div className="description-container">
+      <textarea rows={10}  cols={20}>{description}</textarea>
+      
+      </div>
     </div>
   );
 };
